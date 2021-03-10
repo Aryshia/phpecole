@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Connexion {% endblock %}
+
+{% block navbar %} <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="?page=accueil">4chette</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarColor02">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item">
+			<a class="nav-link" href="?page=accueil">Accueil</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="?page=catalogue">Catalogue</a>
+		  </li>
+		  <li class="nav-item active">
+			<a class="nav-link" href="?page=connexion">Connexion</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="?page=inscription">Inscription</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="?page=4chetteprime">4chette Prime</a>
+		  </li>
+		 </ul>
+		 
+		<form class="form-inline my-2 my-lg-0">
+		  <input class="form-control mr-sm-2" type="text" placeholder="Entrez ici">
+		  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Recherche</button>
+		</form>
+	  </div>
+	</nav> {% endblock %}
+
+{% block contenu %} 
+
+<form action="index.php?page=inscrire"method="post"enctype="application/x-www-form-urlencoded">
+	<h1>Connectez-vous sur 4chette</h1>
+	<label for="inputEmail" class="sr-only">E-mail:</label>
+	<input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
+	<label for="inputPassword" class="sr-only">Mot de passe:</label>
+	<input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Mot de passe" required>
+	<select class="form-control" name="role">
+	<option value="1">Client</option>
+	<option value="2">Staff</option>
+	</select>
+	<button class="btn btn-lg btn-primary btn-block" type="submit" name="btInscrire">Se connecter</button>
+
+{% endblock %}

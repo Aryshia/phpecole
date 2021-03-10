@@ -1,0 +1,90 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Prime {% endblock %}
+
+{% block navbar %} <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="?page=accueil">4chette</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarColor02">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item">
+			<a class="nav-link" href="?page=accueil">Accueil</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="?page=catalogue">Catalogue</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="?page=connexion">Connexion</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="?page=inscription">Inscription</a>
+		  </li>
+		  <li class="nav-item active">
+			<a class="nav-link" href="?page=4chetteprime">4chette Prime</a>
+		  </li>
+		 </ul>
+		 
+		<form class="form-inline my-2 my-lg-0">
+		  <input class="form-control mr-sm-2" type="text" placeholder="Entrez ici">
+		  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Recherche</button>
+		</form>
+	  </div>
+	</nav> {% endblock %}
+
+{% block contenu %} <section class="pricing py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Free Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">Gratuit</h5>
+            <h6 class="card-price text-center">0€<span class="period">/mois</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Un support en 72h max</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Livraison sous 7j</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Plus Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">4chette Prime</h5>
+            <h6 class="card-price text-center">8,99€<span class="period">/mois</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Un support en acier sous 24h</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Livraison sous 3j</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Accès en avance à des fourchettes</li>
+            </ul>
+            <a href="#" class="btn btn-block btn-info text-uppercase">S'abonner</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pro Tier -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">4chette King</h5>
+            <h6 class="card-price text-center">48.99€<span class="period">/mois</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Un support en titane sous 4h</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Livraison sous 24h</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Accès en avance à des fourchettes</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Fourchette gratuite tous les mois</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Des réductions hors paires</li>
+            </ul>
+            <a href="#" class="btn btn-block btn-info text-uppercase">S'abonner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> {% endblock %}
